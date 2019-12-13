@@ -67,6 +67,6 @@ public class ShopDaoTest extends BaseTest {
 
     }
 
- 
+
 
 }
