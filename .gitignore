@@ -33,3 +33,9 @@ taget/
 #system
 .DS_Store
 Thumbs.db
+
+#debuglog
+catalina.base_IS_UNDEFINED/
+
+#gitignore
+.gitignore
