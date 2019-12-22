@@ -76,7 +76,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>
     </appender>
-    <logger name="com.imooc.SchoolO2O" level="${log.level}" additivity="true">
+    <logger name="com.imooc.schoolo2o" level="${log.level}" additivity="true">
         <appender-ref ref="debugAppender"/>
         <appender-ref ref="infoAppender"/>
         <appender-ref ref="errorAppender"/>

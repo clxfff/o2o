@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-    <mapper namespace="com.imooc.SchoolO2O.dao.ShopDao">
-        <resultMap id="shopMap" type="com.imooc.SchoolO2O.entity.Shop">
+    <mapper namespace="com.imooc.schoolo2o.dao.ShopDao">
+        <resultMap id="shopMap" type="com.imooc.schoolo2o.entity.Shop">
             <id column="shop_id" property="shopId"/>
             <!--<result column="owner_id" property="ownerId"/>
             <result column="shop_category_id" property="shopCategoryId"/>-->
@@ -17,17 +17,17 @@
             <result column="last_edit_time" property="lastEditTime"/>
             <result column="enable_status" property="enableStatus"/>
             <result column="advice" property="advice"/>
-            <association property="area" column="area_id" javaType="com.imooc.SchoolO2O.entity.Area">
+            <association property="area" column="area_id" javaType="com.imooc.schoolo2o.entity.Area">
                 <id column="area_id" property="areaId"/>
                 <result column="area_name" property="areaName"/>
             </association>
             <association property="shopCategory" column="shop_category_id"
-                         javaType="com.imooc.SchoolO2O.entity.ShopCategory">
+                         javaType="com.imooc.schoolo2o.entity.ShopCategory">
                 <id column="shop_category_id" property="shopCategoryId"/>
                 <result column="shop_category_name" property="shopCategoryName"/>
             </association>
             <association property="owner" column="user_id"
-                         javaType="com.imooc.SchoolO2O.entity.PersonInfo">
+                         javaType="com.imooc.schoolo2o.entity.PersonInfo">
                 <id column="user_id" property="userId"/>
                 <result column="name" property="name"/>
             </association>
@@ -70,7 +70,7 @@
             #{shopDesc},#{shopAddr},#{phone},#{shopImg},#{priority},#{createTime},#{lastEditTime},
             #{enableStatus},#{advice})
         </insert>
-        <update id="updateShop" parameterType="com.imooc.SchoolO2O.entity.Shop">
+        <update id="updateShop" parameterType="com.imooc.schoolo2o.entity.Shop">
             update tb_shop
             <set>
                 <if test="shopName != null">shop_name=#{shopName},</if>
