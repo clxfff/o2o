@@ -10,5 +10,11 @@ import java.io.File;
 import java.io.InputStream;
 
 public interface ShopService {
+    /* 通过店铺Id查找店铺 */
+    Shop getByShopId(long shopId);
+
+    /* 更新店铺的信息，包括对图片的处理*/
+    ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream, String filename) throws ShopOperationException;
+
     ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
 }
